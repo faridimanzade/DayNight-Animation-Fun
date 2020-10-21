@@ -1,0 +1,260 @@
+.frame {
+    margin: 50px auto 0;
+    width: 90%;
+    height: 500px;
+    background-color: rgb(80, 219, 219);
+    position: relative;
+    animation-name: weather;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.frame img:nth-child(1) {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: 40%;
+    z-index: 100;
+}
+
+.sun {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: sun;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    background-color: red;
+    left: 100px;
+}
+
+.moon {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    animation-name: moon;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    right: 100px;
+}
+
+.cloud {
+    height: 100px;
+    width: 150px;
+}
+
+.one {
+    position: absolute;
+    top: 150px;
+    animation: cloudOne 15s ease-in-out infinite alternate,
+        cloudSize 1s linear infinite alternate;
+    z-index: 1;
+    height: 50px;
+    width: 80px;
+}
+
+.two {
+    position: absolute;
+    top: 100px;
+    animation: cloudTwo 8s ease-in-out infinite alternate,
+        cloudSize 1s linear infinite alternate;
+    z-index: 1;
+    height: 40px;
+    width: 90px;
+}
+
+.three {
+    position: absolute;
+    top: 80px;
+    animation: cloudThree 20s ease-in-out infinite alternate,
+        cloudSize 1s linear infinite alternate;
+    z-index: 1;
+    height: 80px;
+    width: 120px;
+}
+
+.four {
+    position: absolute;
+    top: 20px;
+    animation: cloudFour 15s ease-in-out infinite alternate,
+        cloudSize 1s linear infinite alternate;
+    z-index: 1;
+}
+
+.star {
+    height: 30px;
+    width: 30px;
+}
+
+.starOne{
+    position: absolute;
+    left: 250px;
+    top: 10px;
+    animation-name: starAppear;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.starTwo{
+    position: absolute;
+    left: 400px;
+    top: 30px;
+    animation-name: starAppear;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.starThree{
+    position: absolute;
+    right: 350px;
+    top: 35px;
+    animation-name: starAppear;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+.starFour{
+    position: absolute;
+    right: 50px;
+    top: 40px;
+    animation-name: starAppear;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+.starFive{
+    position: absolute;
+    right: 100px;
+    top: 5px;
+    animation-name: starAppear;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+.starSix{
+    position: absolute;
+    left: 100px;
+    top: 35px;
+    animation-name: starAppear;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes sun {
+    0% {
+        top: 50px;
+        background-color: rgb(167, 151, 7);
+    }
+
+    100% {
+        top: 400px;
+        background-color: rgb(180, 52, 7);
+    }
+}
+
+@keyframes weather {
+    0% {
+        background-color: darkcyan;
+    }
+
+    100% {
+        background-color: rgb(30, 30, 30);
+    }
+}
+
+@keyframes moon {
+    0% {
+        bottom: 0px;
+        transform: rotateZ(0);
+    }
+
+    100% {
+        bottom: 350px;
+        transform: rotateZ(360deg);
+    }
+}
+
+/* ----------- CLOUDS --------------*/
+
+@keyframes cloudSize {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes cloudOne {
+    0% {
+        right: 10%;
+    }
+
+    100% {
+        right: 80%;
+    }
+}
+
+@keyframes cloudTwo {
+    0% {
+        left: 10%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes cloudThree {
+    0% {
+        left: 10%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes cloudFour {
+    0% {
+        left: 40%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes starAppear{
+    0% {
+        opacity: 0;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateZ(360deg);
+    }
+}
